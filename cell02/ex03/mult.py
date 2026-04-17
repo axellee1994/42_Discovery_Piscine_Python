@@ -15,7 +15,10 @@ def multiply():
         print("The result is positive.")
 
 def main():
-    multiply()
+    try:
+        multiply()
+    except ValueError:
+        print("Error: Please enter valid integers.")
 
 if __name__ == "__main__":
     main()

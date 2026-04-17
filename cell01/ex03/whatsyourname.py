@@ -3,7 +3,12 @@ last_name = input("And your last name? : ")
 whole_name = first_name + " " + last_name
 
 def main():
-    print(f"Well, pleased to meet you, {whole_name}.")
-
+    try:
+        if not first_name or not last_name:
+            raise ValueError("Both first name and last name must be provided.")
+        print(f"Well, pleased to meet you, {whole_name}.")
+    except ValueError as e:
+        print(e)
+        
 if __name__ == "__main__":
     main()

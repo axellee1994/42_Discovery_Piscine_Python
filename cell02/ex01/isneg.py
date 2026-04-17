@@ -10,7 +10,10 @@ def is_negative():
         print("This number is negative.")
 
 def main():
-    is_negative()
-        
+    try:
+        is_negative()
+    except ValueError:
+        print("Error: Please enter a valid integer.")
+
 if __name__ == "__main__":
     main()
